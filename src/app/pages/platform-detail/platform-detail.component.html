@@ -1,0 +1,56 @@
+<section class="platform-detail" *ngIf="detail">
+	<div class="platform-header">
+		<div class="platform-logo">
+			<img *ngIf="detail.logo" [src]="detail.logo" [alt]="detail.name | titlecase" />
+		</div>
+		<div class="platform-title-group">
+			<h1>{{ detail.name | titlecase }}</h1>
+			<div class="platform-badges">
+				<span class="badge rating"><span class="star">★</span> {{ detail.rating }}/5</span>
+				<span class="badge transparency">Transparency: {{ detail.transparency }}%</span>
+				<span class="badge risk risk-{{ detail.risk | lowercase }}">Risk: {{ detail.risk }}</span>
+			</div>
+		</div>
+	</div>
+	<div class="platform-sections">
+		<div class="section-card">
+			<div class="section-icon">🔐</div>
+			<div>
+				<h3>Personal data</h3>
+				<ul>
+					<li><strong>Data collected:</strong> {{ detail.data.collected }}</li>
+					<li><strong>Shared with third parties:</strong> {{ detail.data.shared }}</li>
+					<li><strong>Risk level:</strong> {{ detail.data.risk }}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section-card">
+			<div class="section-icon">💰</div>
+			<div>
+				<h3>Payment</h3>
+				<ul>
+					<li><strong>Automatic subscription:</strong> {{ detail.payment.auto }}</li>
+					<li><strong>Refund:</strong> {{ detail.payment.refund }}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section-card">
+			<div class="section-icon">🚫</div>
+			<div>
+				<h3>Account suspension</h3>
+				<ul>
+					<li><strong>Deletion without notice:</strong> {{ detail.suspension.warning }}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section-card">
+			<div class="section-icon">📢</div>
+			<div>
+				<h3>Content usage</h3>
+				<ul>
+					<li><strong>Use of your photos:</strong> {{ detail.content.usage }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

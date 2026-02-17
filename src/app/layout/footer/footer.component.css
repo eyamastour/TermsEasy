@@ -1,9 +1,11 @@
 .footer {
   margin-top: var(--sectionseparation);
-  background-color: var(--colorp2);
+  background-color: var(--colorprimary);
+  color: var(--colorsecondary);
   padding: 25px;
   text-align: center;
   position: relative;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
 }
 
 .footer-content {

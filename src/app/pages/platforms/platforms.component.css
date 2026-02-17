@@ -1,0 +1,115 @@
+/* Lien vers la page de comparaison */
+.comparison-link-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 2.5rem;
+}
+.comparison-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	background: #e3f2fd;
+	color: #1976d2;
+	font-weight: 700;
+	border-radius: 999px;
+	padding: 0.7em 1.7em;
+	font-size: 1.08rem;
+	text-decoration: none;
+	box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.comparison-link:hover {
+	background: #1976d2;
+	color: #fff;
+	box-shadow: 0 4px 18px #1976d233;
+}
+.comparison-link .icon {
+	font-size: 1.2em;
+}
+
+.platforms-list {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2.5rem 1rem 3rem 1rem;
+}
+.platforms-list h1 {
+	font-size: 2.2rem;
+	font-weight: 800;
+	margin-bottom: 2.2rem;
+	color: #222;
+	text-align: center;
+}
+.platforms-filters {
+	display: flex;
+	justify-content: center;
+	gap: 1.2rem;
+	margin-bottom: 2.5rem;
+}
+.filter-btn {
+	background: #f8fafc;
+	border: 1px solid #e0e0e0;
+	color: #1976d2;
+	font-weight: 600;
+	border-radius: 6px;
+	padding: 0.6rem 1.5rem;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active, .filter-btn:hover {
+	background: #1976d2;
+	color: #fff;
+}
+.platforms-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 2.2rem;
+}
+.platform-card {
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+	padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: box-shadow 0.2s, transform 0.2s;
+}
+.platform-card:hover {
+	box-shadow: 0 4px 24px #1976d222;
+	transform: translateY(-4px) scale(1.03);
+}
+.platform-logo {
+	height: 48px;
+	max-width: 120px;
+	margin-bottom: 1.2rem;
+	object-fit: contain;
+}
+.platform-info h2 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	color: #1976d2;
+	text-align: center;
+}
+.platform-rating {
+	font-size: 1.1rem;
+	color: #222;
+	margin-bottom: 1.1rem;
+	text-align: center;
+}
+.btn-card {
+	display: inline-block;
+	padding: 0.6rem 1.3rem;
+	background: #1976d2;
+	color: #fff;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.btn-card:hover {
+	background: #125ea2;
+}

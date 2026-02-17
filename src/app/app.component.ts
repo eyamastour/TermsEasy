@@ -6,6 +6,7 @@ import { SampleImagesComponent } from "./sections/sample-images/sample-images.co
 import { TimelineComponent } from './sections/timeline/timeline.component';
 import { CardsComponent } from './sections/cards/cards.component';
 import { MoreInformationComponent } from "./sections/more-information/more-information.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { MoreInformationComponent } from "./sections/more-information/more-infor
     SampleImagesComponent,
     TimelineComponent,
     CardsComponent,
-    MoreInformationComponent
+    MoreInformationComponent,
+    RouterModule
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

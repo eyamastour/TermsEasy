@@ -1,39 +1,52 @@
-Angular Template For My Website
-============
-This is an Angular project you can use to build your personal website.
+# TermsEasy
 
-## Demo
-https://diprefranco.github.io/angular-template-my-website/
+A modern, educational Angular web app that summarizes the key points of the terms of service for major digital platforms (social networks, e-commerce, streaming, etc). The site provides clear, accessible summaries written in advance—no automatic contract analysis.
 
-# ![Website Screenshot](https://github.com/diprefranco/angular-template-my-website/blob/main/src/assets/img/website.png)
+## Features
+- **Homepage:** Modern hero, description, and feature highlights
+- **Platform List:** Browse and filter major platforms
+- **Platform Detail:** See a summary of each platform's terms, with logo, ratings, and key criteria
+- **Comparison:** Compare two platforms side-by-side on privacy, payment, risk, and more
+- **Fully in English:** All content and navigation
+- **Responsive Design:** Works on desktop and mobile
 
-## Website Overview
-The site shows a header followed by the main section (hero section) to catch users attention.
+## Technologies
+- Angular 17+ (standalone components)
+- TypeScript
+- CSS (modern, responsive)
 
-After that, we have:
-- A section with sample images.
-- A section with a timeline.
-- A section with cards.
-- A section with two buttons to show additional information.
+## Getting Started
 
-The footer contains the site icon, navigation links, and contact icons. The entire site is **responsive** and adjusts to different screen sizes.
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm
 
-## Usage
-To run the site locally, clone this repository and navigate to the root directory. Then, install the dependencies with:<br />
-`npm install`
+### Installation
+1. Clone the repository:
+2. Install dependencies:
+	```bash
+	npm install
+	```
+3. Start the development server:
+	```bash
+	npm start
+	```
+4. Open your browser at [http://localhost:4200](http://localhost:4200)
 
-Start the application with:<br />
-`npm start`
+## Project Structure
+- `src/app/pages/home/` — Homepage
+- `src/app/pages/platforms/` — Platform list
+- `src/app/pages/platform-detail/` — Platform detail page
+- `src/app/pages/comparison/` — Comparison page
+- `src/app/layout/` — Header and footer
+- `src/assets/img/` — (If needed) Local images
 
-## Version Information
-This project was built with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
-
-## Acknowledgments
-This design was inspired by work from [Sajid](https://www.iamsajid.com/). I want to thank him for his videos and examples.<br />
-Check out [Sajid's YouTube channel](https://www.youtube.com/@whosajid) to learn some great web design basics and tricks.
-
-## Author
-GitHub: [Franco Dipre](https://github.com/diprefranco/)
+## Customization
+- To add or edit platforms, update the `platforms` array in `src/app/pages/platform-detail/platform-detail.component.ts`.
+- Platform logos can use web URLs or local images.
 
 ## License
-[MIT LICENSE](LICENSE)
+MIT
+
+---
+Made with ❤️ by Franco Dipre

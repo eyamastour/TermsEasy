@@ -1,0 +1,26 @@
+<section class="platforms-list">
+	<h1>Available Platforms</h1>
+	<div class="platforms-filters">
+		<button *ngFor="let cat of categories"
+						class="filter-btn"
+						[class.active]="selectedCategory === cat"
+						(click)="selectCategory(cat)">
+			{{cat}}
+		</button>
+	</div>
+	<div class="platforms-cards">
+		<div *ngFor="let p of filteredPlatforms" class="platform-card">
+			<img [src]="p.logo" [alt]="p.name" class="platform-logo" />
+			<div class="platform-info">
+				<h2>{{p.name}}</h2>
+				<div class="platform-rating">⭐ {{p.rating}}</div>
+				<a class="btn-card" [routerLink]="['/platforms', p.name.toLowerCase()]">See summary</a>
+			</div>
+		</div>
+	</div>
+	<div class="comparison-link-wrapper">
+		<a class="comparison-link" routerLink="/platforms/comparison">
+			<span class="icon">🔄</span> Compare platforms
+		</a>
+	</div>
+</section>

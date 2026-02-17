@@ -1,0 +1,100 @@
+<section class="comparison-page">
+  <h1>Platform Comparison</h1>
+  <div class="comparison-selectors">
+    <label>
+      Platform 1:
+      <select [(ngModel)]="platformA">
+        <option *ngFor="let p of platforms" [value]="p.key">{{ p.label }}</option>
+      </select>
+    </label>
+    <span class="vs">vs</span>
+    <label>
+      Platform 2:
+      <select [(ngModel)]="platformB">
+        <option *ngFor="let p of platforms" [value]="p.key">{{ p.label }}</option>
+      </select>
+    </label>
+  </div>
+  <div class="comparison-table-wrapper">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th>{{ platformALabel }}</th>
+          <th>{{ platformBLabel }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let crit of criteria">
+          <td>{{ crit.label }}</td>
+          <td>
+            <ng-container [ngSwitch]="crit.label">
+              <ng-container *ngSwitchCase="'Collecte données'">
+                <span [ngClass]="{
+                  'score-high': crit.a === 'Élevée',
+                  'score-medium': crit.a === 'Moyenne',
+                  'score-low': crit.a === 'Faible'
+                }">
+                  <span *ngIf="crit.a === 'Élevée'">🔴</span>
+                  <span *ngIf="crit.a === 'Moyenne'">🟠</span>
+                  <span *ngIf="crit.a === 'Faible'">🟢</span>
+                  {{ crit.a }}
+                </span>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Suppression compte'">
+                <span [ngClass]="{'ok': crit.a === 'Possible', 'nok': crit.a !== 'Possible'}">
+                  <span *ngIf="crit.a === 'Possible'">✅</span>
+                  <span *ngIf="crit.a !== 'Possible'">❌</span>
+                  {{ crit.a }}
+                </span>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Partage données'">
+                <span [ngClass]="{'ok': crit.a === 'Oui', 'nok': crit.a !== 'Oui'}">
+                  <span *ngIf="crit.a === 'Oui'">🔄</span>
+                  <span *ngIf="crit.a !== 'Oui'">🚫</span>
+                  {{ crit.a }}
+                </span>
+              </ng-container>
+              <ng-container *ngSwitchDefault>
+                {{ crit.a }}
+              </ng-container>
+            </ng-container>
+          </td>
+          <td>
+            <ng-container [ngSwitch]="crit.label">
+              <ng-container *ngSwitchCase="'Collecte données'">
+                <span [ngClass]="{
+                  'score-high': crit.b === 'Élevée',
+                  'score-medium': crit.b === 'Moyenne',
+                  'score-low': crit.b === 'Faible'
+                }">
+                  <span *ngIf="crit.b === 'Élevée'">🔴</span>
+                  <span *ngIf="crit.b === 'Moyenne'">🟠</span>
+                  <span *ngIf="crit.b === 'Faible'">🟢</span>
+                  {{ crit.b }}
+                </span>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Suppression compte'">
+                <span [ngClass]="{'ok': crit.b === 'Possible', 'nok': crit.b !== 'Possible'}">
+                  <span *ngIf="crit.b === 'Possible'">✅</span>
+                  <span *ngIf="crit.b !== 'Possible'">❌</span>
+                  {{ crit.b }}
+                </span>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Partage données'">
+                <span [ngClass]="{'ok': crit.b === 'Oui', 'nok': crit.b !== 'Oui'}">
+                  <span *ngIf="crit.b === 'Oui'">🔄</span>
+                  <span *ngIf="crit.b !== 'Oui'">🚫</span>
+                  {{ crit.b }}
+                </span>
+              </ng-container>
+              <ng-container *ngSwitchDefault>
+                {{ crit.b }}
+              </ng-container>
+            </ng-container>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

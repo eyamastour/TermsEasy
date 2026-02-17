@@ -1,11 +1,10 @@
 :root {
-  --colorp2: #191919;
-  --colorprimary: #000000;
-  --colorsecondary: #ffffff;
-  --colorprimarydivider: #333;
-  --colorsecondaryfooter: #aaa;
-  --coloraccent: #05f903;
-  --colorlinks: #0abefb;
+  --colorprimary: #ffffff;
+  --colorsecondary: #222222;
+  --colorprimarydivider: #e0e0e0;
+  --colorsecondaryfooter: #666;
+  --coloraccent: #1976d2;
+  --colorlinks: #1976d2;
   --ff: "Open Sans", sans-serif;
   --h1: bold 54px/70px var(--ff);
   --h2: bold 36px/36px var(--ff);
@@ -51,23 +50,28 @@ p {
   font: var(--p);
 }
 
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--ff);
   padding: 0px;
-  margin: auto;
-  background-color: var(--colorprimary);
+  margin: 0 auto;
+  background-color: var(--colorp2);
   color: var(--colorsecondary);
+  overflow-x: hidden;
 }
 
 header,
-section {
-  width: 90vw;
-  max-width: 1080px;
+section,
+footer {
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
+  box-sizing: border-box;
 }
 
 a {
