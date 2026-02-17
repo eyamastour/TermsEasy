@@ -48,5 +48,3 @@ A modern, educational Angular web app that summarizes the key points of the term
 ## License
 MIT
 
----
-Made with ❤️ by Franco Dipre
